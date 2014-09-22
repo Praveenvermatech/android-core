@@ -10,10 +10,13 @@
     <string name="email">Email ID :</string>
     <string name="state">State :</string>
     <string name="city">City :</string>
+    <string name="image">image</string>
+    <string name="imageDesc">image</string>
     <string name="reset">Reset</string>
     <string name="submit">Submit</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_view_registration_page">ViewRegistrationPage</string>
     <string name="title2">Employee information </string>
+    
 
 </resources>
