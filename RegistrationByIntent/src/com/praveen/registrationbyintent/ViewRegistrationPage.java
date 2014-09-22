@@ -1,15 +1,19 @@
 package com.praveen.registrationbyintent;
 
-import android.os.Bundle;
+
 import android.app.Activity;
 import android.content.Intent;
-import android.view.Menu;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ViewRegistrationPage extends Activity {
 
 	
 	TextView id, name,contact,email,state,city;
+	ImageView imageView;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +26,7 @@ public class ViewRegistrationPage extends Activity {
 		email=(TextView) findViewById(R.id.view_email);
 		state=(TextView) findViewById(R.id.view_state);
 		city=(TextView) findViewById(R.id.view_city);
-		
+		imageView = (ImageView) findViewById(R.id.emp_image);
 		Intent intent=getIntent();
 		id.setText(intent.getStringExtra("id"));
 		name.setText(intent.getStringExtra("name"));
@@ -30,6 +34,13 @@ public class ViewRegistrationPage extends Activity {
 		email.setText(intent.getStringExtra("email"));
 		state.setText(intent.getStringExtra("state"));
 		city.setText(intent.getStringExtra("city"));
+		
+		Bundle bundle=getIntent().getExtras();
+		byte[] byteArray = bundle.getByteArray("imageList");
+		System.out.println("image bitmap :"+byteArray);
+
+		Bitmap bmp = BitmapFactory.decodeByteArray(byteArray, 0,byteArray.length);
+		imageView.setImageBitmap(bmp);
 		
 		
 	}

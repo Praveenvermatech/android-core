@@ -42,7 +42,7 @@
             android:id="@+id/tableRow2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="70dp" >
+            android:layout_marginTop="75dp" >
 
     <TextView
         android:id="@+id/emp_name"
@@ -152,7 +152,21 @@
         android:text="" />
           
       </TableRow>
+       <TableRow
+            android:id="@+id/tableRow7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="220dp" >
+
+    <ImageView
+        android:id="@+id/emp_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="5dp"
+        android:nextFocusDown="@color/backgroundColor"
+        android:contentDescription="@string/imageDesc" />
       
-     
+    </TableRow> 
 
 </RelativeLayout>
