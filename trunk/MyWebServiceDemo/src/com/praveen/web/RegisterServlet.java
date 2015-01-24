@@ -26,8 +26,17 @@ public class RegisterServlet extends HttpServlet {
 	String PASS;
 	String name,email;
 	
-	java.sql.Connection connection;
-	String sql="insert into local_host.register(?,?)";
+	Connection connection;
+	String sql="insert into local_host.register values(?,?)";
+	
+	
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+	
+		doPost(req, resp);
+		
+		super.doGet(req, resp);
+	}
 	
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -53,7 +62,7 @@ public class RegisterServlet extends HttpServlet {
 		
 		try {
 			Class.forName(DRIVER);
-			connection=DriverManager.getConnection(URL, USER, PASS);
+			connection=(Connection) DriverManager.getConnection(URL, USER, PASS);
 			PreparedStatement preparedStatement=(PreparedStatement) connection.prepareStatement(sql);
 			preparedStatement.setString(1, name);
 			preparedStatement.setString(2, email);
