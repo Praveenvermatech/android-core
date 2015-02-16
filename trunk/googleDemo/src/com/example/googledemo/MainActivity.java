@@ -84,6 +84,7 @@ public class MainActivity extends Activity implements LocationListener{
 		// TODO Auto-generated method stub
 		latitude=location.getLatitude();
 		longitude=location.getLongitude();
+		googleMap.clear();
 		System.out.println("LATITUDE : "+String.valueOf(latitude)+ ", LONGITUDE :"+String.valueOf(longitude) );
 		MYLOCATION=new LatLng(latitude, longitude);
 		myMarker = googleMap.addMarker(markerOption.position(MYLOCATION).title("You").snippet("You are here"));
