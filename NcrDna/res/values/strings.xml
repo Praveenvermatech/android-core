@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">NcrDna</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="groupTitle">Latest news</string>
+    <string name="mainMenu">Main menu</string>
+	<string name="moreView">..more</string>
+	<string name="refresh">Refresh</string>
+	
+</resources>

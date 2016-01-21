@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity" >
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint"
+        android:layout_marginLeft="5dp"
+        android:textColor="@android:color/white"
+        android:inputType="phone" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/editText"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/editText"
+        android:textColor="@android:color/white"
+        android:text="" />
+
+    <Button
+        android:id="@+id/devide"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignRight="@+id/plus"
+        android:layout_below="@+id/plus"
+        android:layout_marginTop="18dp"
+        android:tag="devide"
+        android:text="/" />
+
+    <Button
+        android:id="@+id/modular"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBaseline="@+id/devide"
+        android:layout_alignBottom="@+id/devide"
+        android:layout_alignLeft="@+id/minus"
+        android:tag="modular"
+        android:text="%" />
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBaseline="@+id/modular"
+        android:layout_alignBottom="@+id/modular"
+        android:layout_alignLeft="@+id/multiply"
+        android:text="C" />
+
+    <Button
+        android:id="@+id/equal"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/devide"
+        android:layout_below="@+id/modular"
+        android:layout_marginTop="15dp"
+        android:tag="equal"
+        android:text="=" />
+
+    <Button
+        android:id="@+id/multiply"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/devide"
+        android:layout_alignRight="@+id/editText"
+        android:layout_marginRight="19dp"
+        android:tag="multiply"
+        android:text="*" />
+
+    <Button
+        android:id="@+id/plus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/editText"
+        android:layout_marginTop="34dp"
+        android:layout_toLeftOf="@+id/minus"
+        android:tag="plus"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/minus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/devide"
+        android:layout_toLeftOf="@+id/multiply"
+        android:tag="minus"
+        android:text="-" />
+
+</RelativeLayout>
